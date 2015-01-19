@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pregnancy Weight Gain Calculator</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Pregnancy Weight Gain Calculator">
+  <meta name="author" content="D. E.">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/js/slides" 
+    src="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Pregnancy Weight Gain Calculator</h1>
+    <h2>A Shiny App to calculate the optimal weight gain during pregnancy</h2>
+    <p>D. E.<br/></p>
+  </hgroup>
+    <a href="https://github.com///zipball/gh-pages" class="example">
+     Download
+    </a>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <article data-timings="">
+    <p><q>How much weight a woman should gain during pregnancy depends 
+on how much she weighed before conceiving and how appropriate 
+that weight is for her height as expressed by the &quot;body mass index,&quot; or BMI</q></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Guidelines for pregnancy weight gain</h2>
+  </hgroup>
+  <article data-timings="">
+    <style>
+strong {
+  font-weight: bold;
+}
+</style>
+
+<p>The guidelines for pregnancy weight gain are issued by the Institute of Medicine (IOM).</p>
+
+<ul class = "build incremental">
+<li>A woman with a <strong>healthy pre-pregnancy weight</strong> relative to her height (BMI of 18.5 to 24.9), should gain between between 16kg and 24kg.<br></li>
+<li>An <strong>underweight</strong> woman (BMI below 18.5), should gain between 12.5kg and 18kg.<br></li>
+<li>An <strong>overweight</strong> woman (BMI of 25 to 29.9), should gain between 14kg and 23kg.<br></li>
+<li>An <strong>obese</strong> woman (BMI of over 30), should gain between 11kg and 19kg.<br></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>How does the calculator work</h2>
+  </hgroup>
+  <article data-timings="">
+    <style>
+em {
+  font-style: italic
+}
+</style>
+
+<p>The calculator takes 2 inputs:</p>
+
+<ul>
+<li><em>Pre-pregnancy height (in cm)</em></li>
+<li><em>Pre-pregnancy weight (in kg)</em></li>
+</ul>
+
+<p>The user selects the relevant values using a sidebar panel.</p>
+
+<p>The user&#39;s BMI is calculated in the main panel using the following formula:</p>
+
+<pre><code class="r">pBMI&lt;-function(Weight,Height) {
+        if (Weight==0 | Height==0) return(NA)
+        else  return(round(Weight/(Height/100)^2,1))
+}
+</code></pre>
+
+<p>The user&#39;s recommended pregnancy weight gain is printed out below the BMI figure.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <article data-timings="">
+    <p><br><br>
+<strong>Thank you</strong>
+<br><br></p>
+
+<p>Visit the following URL to see the finished product  </p>
+
+<p><a href="https://daelia.shinyapps.io/PregnancyWeight/">Pregnancy Weight Gain Calculator</a><br>
+<br><br></p>
+
+<p>The code is also available on github  </p>
+
+<p><a href="https://github.com/Riccina/Developing-Data-Products/">Github Code</a><br>
+<br><br></p>
+
+<p>For more information on weight gain during pregnancy visit  </p>
+
+<p><a href="http://iom.edu/Reports/2009/Weight-Gain-During-Pregnancy-Reexamining-the-Guidelines.aspx">Weight Gain During Pregnancy Reexamining the Guidelines</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title=''>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Guidelines for pregnancy weight gain'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='How does the calculator work'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title=''>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
